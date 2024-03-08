@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './routes/About';
 import Home from './routes/Home';
 import Navigation from './components/Navigation';
+import Detail from './components/Detail';
 
 const App = (props) => {
   console.log(props);
@@ -12,6 +13,7 @@ const App = (props) => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/movie-detail" element={<Detail />} />
       </Routes>
     </Router>
   );

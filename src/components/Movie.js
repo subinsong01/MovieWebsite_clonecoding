@@ -6,6 +6,12 @@ import { Link } from 'react-router-dom';
 const Movie = ({ title, year, summary, poster, genres }) => {
   return (
     <div className='movie'>
+      <Link
+        to={{
+          pathname:'/movie-detail',
+          state: { year, title, summary, poster, genres },
+        }}
+        >
       <div className='movie__data'>
         <img src={poster} alt={title} title={title} />
         <h3 className='movie__title'>
@@ -23,6 +29,7 @@ const Movie = ({ title, year, summary, poster, genres }) => {
           </ul>
         <p className='movie__summary'>{summary.slice(0,180)}....detail</p>
       </div>
+      </Link>
     </div>
   );
 }
